@@ -2,11 +2,21 @@
 #include "hash.hpp"
 #include <stdio.h>
 #include <fstream>
+#include <thread>
+#include <mutex>
+#include <queue>
 #include <string>
 #include <vector>
+#include <atomic>
 #include <filesystem>
 #include <iostream>
 
+std::mutex queueMutex;
+std::mutex outputMutex;
+std::queue<std::string> fileQueue;
+int totalFiles = 0;
+int scannedFiles = 0;
+std::atomic<int> virusesFound(0);
 std::vector<std::string> virusSignatures = {"\x45\x69\x63\x61\x72"};
 
 bool scanFile(const std::string& filepath) {
@@ -42,9 +52,7 @@ bool scanFile(const std::string& filepath) {
     return false;
 }
 
-bool scanDir(const std::string& dirpath) {
-    bool virusFound = false;
-
+bool scanDirParallel(const std::string& dirpath, int numThreads) {
     try {
         if (!std::filesystem::exists(dirpath)) {
             std::printf("Directory %s does not exist\n", dirpath.c_str());
@@ -56,23 +64,51 @@ bool scanDir(const std::string& dirpath) {
             return false;
         }
 
-        std::printf("Scanning directory %s\n", dirpath.c_str());
+        totalFiles = 0;
+        scannedFiles = 0;
+        virusesFound = 0; 
+        
+        std::queue<std::string> empty;
+        std::swap(fileQueue, empty);
+
+        std::printf("=== Collecting files from %s ===\n", dirpath.c_str());
 
         for(const auto& entry: std::filesystem::recursive_directory_iterator(dirpath)) {
             if (entry.is_regular_file()) {
-                std::printf("Scanning: %s\n", entry.path().string().c_str());
-                
-                if (scanFile(entry.path().string())) {
-                    virusFound = true;
-                }
+                fileQueue.push(entry.path().string());
+                totalFiles++;
             }
         }
 
-        if (virusFound) {
+        if (totalFiles == 0) {
+            std::printf("No files found in directory\n");
+            return false;
+        }
+
+        std::printf("Found %d files. Starting scan with %d threads...\n", 
+                    totalFiles, numThreads);
+
+        std::vector<std::thread> threads;
+        for (int i = 0; i < numThreads; i++) {
+            threads.push_back(std::thread(workerThread, i));
+        }
+
+        for (auto& t : threads) {
+            t.join();
+        }
+
+        std::printf("\n=== Scan complete! ===\n");
+        std::printf("Total files scanned: %d\n", scannedFiles);
+        std::printf("Viruses found: %d\n", virusesFound.load());
+
+        if (virusesFound > 0) {
             std::printf("\n[!] Viruses detected in directory!\n");
+            return true;
         } else {
             std::printf("\n[+] Directory is clean\n");
+            return false;
         }
+
     }
     catch(const std::filesystem::filesystem_error& e) {
         std::printf("Filesystem error: %s\n", e.what());
@@ -82,8 +118,6 @@ bool scanDir(const std::string& dirpath) {
         std::printf("Error: %s\n", e.what());
         return false;
     }
-    
-    return virusFound;
 }
 
 void updateSignatures(const std::string& signaturesFile) {
@@ -107,4 +141,35 @@ void updateSignatures(const std::string& signaturesFile) {
     }
 
     std::printf("Loaded %d virus signatures from %s\n", count, signaturesFile.c_str());
+}
+
+void workerThread(int threadId) {
+    while (true) {
+        std::string filepath;
+
+        {
+            std::lock_guard<std::mutex> lock(queueMutex);
+            if (fileQueue.empty()) {
+                break;
+            }
+            filepath = fileQueue.front();
+            fileQueue.pop();
+        }
+
+        bool infected = scanFile(filepath);
+
+        {
+            std::lock_guard<std::mutex> lock(outputMutex);
+            scannedFiles++;
+            
+            if (infected) {
+                virusesFound++; 
+                std::cout << "[Thread " << threadId << "] INFECTED: " 
+                          << filepath << std::endl;
+            }
+            
+            std::cout << "Progress: " << scannedFiles << "/" << totalFiles 
+                      << std::endl;
+        }
+    }
 }

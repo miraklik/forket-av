@@ -77,7 +77,7 @@ Phase 2: Simple signature-based scanning (finding substrings). ✅
 
 Phase 3: Hash-based scanning (MD5/SHA256). ✅
 
-Phase 4: Multithreading (using Thread Pools for faster scanning). ⏳
+Phase 4: Multithreading (using Thread Pools for faster scanning). ✅
 
 Phase 5: Mach-O / PE file header analysis. ⏳
 

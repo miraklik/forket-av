@@ -2,6 +2,7 @@
 #include "utils.hpp"
 #include "hash.hpp"
 #include <stdio.h>
+#include <thread>
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -11,6 +12,10 @@ int main(int argc, char* argv[]) {
     }
 
     std::string command = argv[1];
+    unsigned int numThreads = std::thread::hardware_concurrency();
+
+    printf("=== Forket antivirus v1.0 ===\n");
+    printf("Threads: %d\n", numThreads);
 
     if (command == "help" || command == "-h" || command == "--help") {
         printHelp();
@@ -42,9 +47,9 @@ int main(int argc, char* argv[]) {
         }
         
         std::string dirpath = argv[2];
-        std::printf("=== Scanning directory: %s ===\n", dirpath.c_str());
         
-        bool result = scanDir(dirpath);
+        std::printf("=== Scanning directory: %s ===\n", dirpath.c_str());
+        bool result = scanDirParallel(dirpath, numThreads);
         return result ? 1 : 0;
     }
 

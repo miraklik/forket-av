@@ -14,7 +14,7 @@ std::string calculateSHA256(const std::string& filepath) {
 
     if (!file.is_open()) {
         printf("Failed to open file: %s\n", filepath.c_str());
-        return;
+        return "";
     }
 
     SHA256_CTX sha256;
