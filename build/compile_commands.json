@@ -1,6 +1,12 @@
 [
 {
   "directory": "/Users/mapak/Desktop/dev/forket/build",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/hash.cpp.o -c /Users/mapak/Desktop/dev/forket/src/hash.cpp",
+  "file": "/Users/mapak/Desktop/dev/forket/src/hash.cpp",
+  "output": "CMakeFiles/antivirus.dir/src/hash.cpp.o"
+},
+{
+  "directory": "/Users/mapak/Desktop/dev/forket/build",
   "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/main.cpp.o -c /Users/mapak/Desktop/dev/forket/src/main.cpp",
   "file": "/Users/mapak/Desktop/dev/forket/src/main.cpp",
   "output": "CMakeFiles/antivirus.dir/src/main.cpp.o"

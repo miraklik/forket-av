@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/antivirus.dir/src/hash.cpp.o"
+  "CMakeFiles/antivirus.dir/src/hash.cpp.o.d"
   "CMakeFiles/antivirus.dir/src/main.cpp.o"
   "CMakeFiles/antivirus.dir/src/main.cpp.o.d"
   "CMakeFiles/antivirus.dir/src/scanner.cpp.o"

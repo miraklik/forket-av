@@ -129,6 +129,30 @@ antivirus/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/build
 .PHONY : antivirus/fast
 
+src/hash.o: src/hash.cpp.o
+.PHONY : src/hash.o
+
+# target to build an object file
+src/hash.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/hash.cpp.o
+.PHONY : src/hash.cpp.o
+
+src/hash.i: src/hash.cpp.i
+.PHONY : src/hash.i
+
+# target to preprocess a source file
+src/hash.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/hash.cpp.i
+.PHONY : src/hash.cpp.i
+
+src/hash.s: src/hash.cpp.s
+.PHONY : src/hash.s
+
+# target to generate assembly for a file
+src/hash.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/hash.cpp.s
+.PHONY : src/hash.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... antivirus"
+	@echo "... src/hash.o"
+	@echo "... src/hash.i"
+	@echo "... src/hash.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -1,5 +1,6 @@
 #include "scanner.hpp"
 #include "hash.hpp"
+#include "pe_analyzer.hpp"
 #include <stdio.h>
 #include <fstream>
 #include <thread>
@@ -21,6 +22,16 @@ std::vector<std::string> virusSignatures = {"\x45\x69\x63\x61\x72"};
 
 bool scanFile(const std::string& filepath) {
     printf("=== Scanning file: %s ===\n", filepath.c_str());
+
+    if(isPEFile(filepath)) {
+        printf("File is a PE file\n");
+        PEAnalysisResult result = analyzePEFile(filepath);
+
+        if (result.suspicionScore >= 50) {
+            printf("🔴 HIGH RISK: This file is highly suspicious!\n");
+            return true;
+        }
+    }
 
     std::string fileHash = calculateSHA256(filepath);
     if(!fileHash.empty()) {
