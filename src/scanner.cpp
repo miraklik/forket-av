@@ -1,4 +1,5 @@
 #include "scanner.hpp"
+#include "hash.hpp"
 #include <stdio.h>
 #include <fstream>
 #include <string>
@@ -9,6 +10,18 @@
 std::vector<std::string> virusSignatures = {"\x45\x69\x63\x61\x72"};
 
 bool scanFile(const std::string& filepath) {
+    printf("=== Scanning file: %s ===\n", filepath.c_str());
+
+    std::string fileHash = calculateSHA256(filepath);
+    if(!fileHash.empty()) {
+        printf("File hash: %s\n", fileHash.c_str());
+
+        if(checkDatabase(fileHash)) {
+            printf("Virus found in %s\n", filepath.c_str());
+            return true;
+        }
+    }
+
     std::ifstream file(filepath, std::ios::binary);
     if(!file.is_open()) {
         std::printf("Failed to open file: %s\n", filepath.c_str());

@@ -1,1 +1,1 @@
-/usr/bin/clang++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/antivirus.dir/src/main.cpp.o CMakeFiles/antivirus.dir/src/scanner.cpp.o -o antivirus  -framework CoreServices
+/usr/bin/clang++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/antivirus.dir/src/main.cpp.o CMakeFiles/antivirus.dir/src/scanner.cpp.o CMakeFiles/antivirus.dir/src/utils.cpp.o -o antivirus  -framework CoreServices

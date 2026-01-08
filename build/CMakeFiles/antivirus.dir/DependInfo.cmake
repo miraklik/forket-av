@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/mapak/Desktop/dev/forket/src/main.cpp" "CMakeFiles/antivirus.dir/src/main.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/main.cpp.o.d"
   "/Users/mapak/Desktop/dev/forket/src/scanner.cpp" "CMakeFiles/antivirus.dir/src/scanner.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/scanner.cpp.o.d"
+  "/Users/mapak/Desktop/dev/forket/src/utils.cpp" "CMakeFiles/antivirus.dir/src/utils.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/utils.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

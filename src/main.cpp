@@ -1,5 +1,6 @@
 #include "scanner.hpp"
 #include "utils.hpp"
+#include "hash.hpp"
 #include <stdio.h>
 
 int main(int argc, char* argv[]) {
@@ -15,6 +16,9 @@ int main(int argc, char* argv[]) {
         printHelp();
         return 0;
     }
+
+    updateSignatures("signatures.txt");
+    loadHashDatabase("hashes.txt");
 
     if (command == "scan") {
         if (argc < 3) {
