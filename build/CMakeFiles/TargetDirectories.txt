@@ -1,0 +1,3 @@
+/Users/mapak/Desktop/dev/forket/build/CMakeFiles/antivirus.dir
+/Users/mapak/Desktop/dev/forket/build/CMakeFiles/edit_cache.dir
+/Users/mapak/Desktop/dev/forket/build/CMakeFiles/rebuild_cache.dir
