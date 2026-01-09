@@ -2,9 +2,38 @@
 #include "utils.hpp"
 #include "hash.hpp"
 #include "pe_analyzer.hpp"
+#include "realtime_monitoring.hpp"
+#include <CoreServices/CoreServices.h>
 #include <stdio.h>
 #include <thread>
 #include <filesystem>
+
+void onFileEvent(const std::string& path, bool isCreated, bool isModified) {
+    std::string ext = std::filesystem::path(path).extension().string();
+    
+    if (ext != ".exe" && ext != ".sh" && ext != ".app" && 
+        ext != ".dmg" && ext != ".pkg" && ext != ".zip" &&
+        ext != ".py" && ext != ".rb" && ext != ".pl") {
+        return;
+    }
+    
+    if (isCreated) {
+        printf("\nNew file detected: %s\n", path.c_str());
+    } else if (isModified) {
+        printf("\nFile modified: %s\n", path.c_str());
+    }
+    
+    printf("🔍 Scanning...\n");
+    
+    bool isMalware = scanFile(path);
+    
+    if (isMalware) {
+        printf("ALERT: MALWARE DETECTED!\n");
+        printf("File: %s\n", path.c_str());
+    } else {
+        printf("File is clean\n");
+    }
+}
 
 int main(int argc, char* argv[]) {
     printf("=== Forket Antivirus v1.0 ===\n");
@@ -89,7 +118,7 @@ int main(int argc, char* argv[]) {
             return 1;
         }
         
-        if (!std::filesystem::is_directory(dirpath)) {
+        if (!std::filesystem::is_directory(dirpath)) {  
             printf("Error: Not a directory: %s\n", dirpath.c_str());
             return 1;
         }
@@ -110,6 +139,34 @@ int main(int argc, char* argv[]) {
         return result ? 1 : 0;
     }
 
+    if (command == "monitor" || command == "realtime") {
+    if (argc < 3) {
+        printf("Error: No directory specified\n");
+        printf("Usage: forket monitor <directory>\n");
+        return 1;
+    }
+    
+    std::string dirpath = argv[2];
+    
+    if (!std::filesystem::exists(dirpath)) {
+        printf("Error: Directory not found: %s\n", dirpath.c_str());
+        return 1;
+    }
+    
+    printf("=== Starting Real-time Protection ===\n");
+    printf("Monitoring: %s\n", dirpath.c_str());
+    printf("Press Ctrl+C to stop...\n\n");
+    
+    updateSignatures("signatures.txt");
+    loadHashDatabase("hashes.txt");
+    
+    RealTimeMonitoring monitor;
+    
+    if (!monitor.startMonitoring(dirpath, onFileEvent)) {
+        printf("Error: Failed to start monitoring\n");
+        return 1;
+    }
+
     if (command == "update") {
         if (argc < 3) {
             printf("Error: No signature file specified\n");
@@ -127,11 +184,13 @@ int main(int argc, char* argv[]) {
         printf("=== Updating signatures from: %s ===\n", sigfile.c_str());
         updateSignatures(sigfile);
         
-        printf("✅ Signatures updated successfully\n");
+        printf("Signatures updated successfully\n");
         return 0;
     }
 
     printf("Error: Unknown command '%s'\n\n", command.c_str());
     printHelp();
+
+    CFRunLoopRun();
     return 1;
 }
