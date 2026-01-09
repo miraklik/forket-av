@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/mapak/Desktop/dev/forket/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/antivirus.dir/all
+all: CMakeFiles/forket.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/antivirus.dir/codegen
+codegen: CMakeFiles/forket.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/antivirus.dir/clean
+clean: CMakeFiles/forket.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/antivirus.dir
+# Target rules for target CMakeFiles/forket.dir
 
 # All Build rule for target.
-CMakeFiles/antivirus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target antivirus"
-.PHONY : CMakeFiles/antivirus.dir/all
+CMakeFiles/forket.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target forket"
+.PHONY : CMakeFiles/forket.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/antivirus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mapak/Desktop/dev/forket/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/antivirus.dir/all
+CMakeFiles/forket.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mapak/Desktop/dev/forket/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/forket.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mapak/Desktop/dev/forket/build/CMakeFiles 0
-.PHONY : CMakeFiles/antivirus.dir/rule
+.PHONY : CMakeFiles/forket.dir/rule
 
 # Convenience name for target.
-antivirus: CMakeFiles/antivirus.dir/rule
-.PHONY : antivirus
+forket: CMakeFiles/forket.dir/rule
+.PHONY : forket
 
 # codegen rule for target.
-CMakeFiles/antivirus.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target antivirus"
-.PHONY : CMakeFiles/antivirus.dir/codegen
+CMakeFiles/forket.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target forket"
+.PHONY : CMakeFiles/forket.dir/codegen
 
 # clean rule for target.
-CMakeFiles/antivirus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/clean
-.PHONY : CMakeFiles/antivirus.dir/clean
+CMakeFiles/forket.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/clean
+.PHONY : CMakeFiles/forket.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

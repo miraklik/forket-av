@@ -245,6 +245,15 @@ FORKET_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 FORKET_SOURCE_DIR:STATIC=/Users/mapak/Desktop/dev/forket
 
+//Value Computed by CMake
+Forket_BINARY_DIR:STATIC=/Users/mapak/Desktop/dev/forket/build
+
+//Value Computed by CMake
+Forket_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Forket_SOURCE_DIR:STATIC=/Users/mapak/Desktop/dev/forket
+
 
 ########################
 # INTERNAL cache entries

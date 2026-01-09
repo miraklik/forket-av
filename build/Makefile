@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named antivirus
+# Target rules for targets named forket
 
 # Build rule for target.
-antivirus: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 antivirus
-.PHONY : antivirus
+forket: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 forket
+.PHONY : forket
 
 # fast build rule for target.
-antivirus/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/build
-.PHONY : antivirus/fast
+forket/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/build
+.PHONY : forket/fast
 
 src/hash.o: src/hash.cpp.o
 .PHONY : src/hash.o
 
 # target to build an object file
 src/hash.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/hash.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/hash.cpp.o
 .PHONY : src/hash.cpp.o
 
 src/hash.i: src/hash.cpp.i
@@ -142,7 +142,7 @@ src/hash.i: src/hash.cpp.i
 
 # target to preprocess a source file
 src/hash.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/hash.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/hash.cpp.i
 .PHONY : src/hash.cpp.i
 
 src/hash.s: src/hash.cpp.s
@@ -150,15 +150,39 @@ src/hash.s: src/hash.cpp.s
 
 # target to generate assembly for a file
 src/hash.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/hash.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/hash.cpp.s
 .PHONY : src/hash.cpp.s
+
+src/mach_o.o: src/mach_o.cpp.o
+.PHONY : src/mach_o.o
+
+# target to build an object file
+src/mach_o.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/mach_o.cpp.o
+.PHONY : src/mach_o.cpp.o
+
+src/mach_o.i: src/mach_o.cpp.i
+.PHONY : src/mach_o.i
+
+# target to preprocess a source file
+src/mach_o.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/mach_o.cpp.i
+.PHONY : src/mach_o.cpp.i
+
+src/mach_o.s: src/mach_o.cpp.s
+.PHONY : src/mach_o.s
+
+# target to generate assembly for a file
+src/mach_o.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/mach_o.cpp.s
+.PHONY : src/mach_o.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,39 +198,39 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/pe_analyzer.o: src/pe_analyzer.cpp.o
-.PHONY : src/pe_analyzer.o
+src/realtime_monitoring.o: src/realtime_monitoring.cpp.o
+.PHONY : src/realtime_monitoring.o
 
 # target to build an object file
-src/pe_analyzer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o
-.PHONY : src/pe_analyzer.cpp.o
+src/realtime_monitoring.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/realtime_monitoring.cpp.o
+.PHONY : src/realtime_monitoring.cpp.o
 
-src/pe_analyzer.i: src/pe_analyzer.cpp.i
-.PHONY : src/pe_analyzer.i
+src/realtime_monitoring.i: src/realtime_monitoring.cpp.i
+.PHONY : src/realtime_monitoring.i
 
 # target to preprocess a source file
-src/pe_analyzer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.i
-.PHONY : src/pe_analyzer.cpp.i
+src/realtime_monitoring.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/realtime_monitoring.cpp.i
+.PHONY : src/realtime_monitoring.cpp.i
 
-src/pe_analyzer.s: src/pe_analyzer.cpp.s
-.PHONY : src/pe_analyzer.s
+src/realtime_monitoring.s: src/realtime_monitoring.cpp.s
+.PHONY : src/realtime_monitoring.s
 
 # target to generate assembly for a file
-src/pe_analyzer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.s
-.PHONY : src/pe_analyzer.cpp.s
+src/realtime_monitoring.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/realtime_monitoring.cpp.s
+.PHONY : src/realtime_monitoring.cpp.s
 
 src/scanner.o: src/scanner.cpp.o
 .PHONY : src/scanner.o
 
 # target to build an object file
 src/scanner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/scanner.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/scanner.cpp.o
 .PHONY : src/scanner.cpp.o
 
 src/scanner.i: src/scanner.cpp.i
@@ -214,7 +238,7 @@ src/scanner.i: src/scanner.cpp.i
 
 # target to preprocess a source file
 src/scanner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/scanner.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/scanner.cpp.i
 .PHONY : src/scanner.cpp.i
 
 src/scanner.s: src/scanner.cpp.s
@@ -222,7 +246,7 @@ src/scanner.s: src/scanner.cpp.s
 
 # target to generate assembly for a file
 src/scanner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/scanner.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/scanner.cpp.s
 .PHONY : src/scanner.cpp.s
 
 src/utils.o: src/utils.cpp.o
@@ -230,7 +254,7 @@ src/utils.o: src/utils.cpp.o
 
 # target to build an object file
 src/utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/utils.cpp.o
 .PHONY : src/utils.cpp.o
 
 src/utils.i: src/utils.cpp.i
@@ -238,7 +262,7 @@ src/utils.i: src/utils.cpp.i
 
 # target to preprocess a source file
 src/utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/utils.cpp.i
 .PHONY : src/utils.cpp.i
 
 src/utils.s: src/utils.cpp.s
@@ -246,7 +270,7 @@ src/utils.s: src/utils.cpp.s
 
 # target to generate assembly for a file
 src/utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
 # Help Target
@@ -257,16 +281,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... antivirus"
+	@echo "... forket"
 	@echo "... src/hash.o"
 	@echo "... src/hash.i"
 	@echo "... src/hash.s"
+	@echo "... src/mach_o.o"
+	@echo "... src/mach_o.i"
+	@echo "... src/mach_o.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/pe_analyzer.o"
-	@echo "... src/pe_analyzer.i"
-	@echo "... src/pe_analyzer.s"
+	@echo "... src/realtime_monitoring.o"
+	@echo "... src/realtime_monitoring.i"
+	@echo "... src/realtime_monitoring.s"
 	@echo "... src/scanner.o"
 	@echo "... src/scanner.i"
 	@echo "... src/scanner.s"

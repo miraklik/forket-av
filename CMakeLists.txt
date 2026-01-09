@@ -6,9 +6,25 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-file(GLOB SOURCES "src/*.cpp")
+set(SOURCES 
+    src/main.cpp 
+    src/scanner.cpp 
+    src/utils.cpp
+    src/hash.cpp
+    src/realtime_monitoring.cpp
+)
 
-add_executable(antivirus ${SOURCES})
+if (APPLE)
+    list(APPEND SOURCES src/mach_o.cpp)
+    find_library(CORESERVICES_LIB CoreServices)
+endif()
 
-find_library(CORESERVICES_LIB CoreServices)
-target_link_libraries(antivirus ${CORESERVICES_LIB})
+if (WIN32)
+    list(APPEND SOURCES src/pe_analyzer.cpp)
+endif()
+
+add_executable(forket ${SOURCES})
+
+if (APPLE)
+    target_link_libraries(forket ${CORESERVICES_LIB})
+endif()

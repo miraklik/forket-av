@@ -10,7 +10,6 @@
 #include <vector>
 #include <atomic>
 #include <filesystem>
-#include <iostream>
 
 std::mutex queueMutex;
 std::mutex outputMutex;
@@ -175,12 +174,9 @@ void workerThread(int threadId) {
             
             if (infected) {
                 virusesFound++; 
-                std::cout << "[Thread " << threadId << "] INFECTED: " 
-                          << filepath << std::endl;
+                printf("Thread: %d | INFECTED: %s\n", threadId, filepath.c_str());
             }
-            
-            std::cout << "Progress: " << scannedFiles << "/" << totalFiles 
-                      << std::endl;
+            printf("Process: %d%%\n", (scannedFiles * 100) / totalFiles);
         }
     }
 }

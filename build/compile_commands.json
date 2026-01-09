@@ -1,32 +1,38 @@
 [
 {
   "directory": "/Users/mapak/Desktop/dev/forket/build",
-  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/hash.cpp.o -c /Users/mapak/Desktop/dev/forket/src/hash.cpp",
-  "file": "/Users/mapak/Desktop/dev/forket/src/hash.cpp",
-  "output": "CMakeFiles/antivirus.dir/src/hash.cpp.o"
-},
-{
-  "directory": "/Users/mapak/Desktop/dev/forket/build",
-  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/main.cpp.o -c /Users/mapak/Desktop/dev/forket/src/main.cpp",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/main.cpp.o -c /Users/mapak/Desktop/dev/forket/src/main.cpp",
   "file": "/Users/mapak/Desktop/dev/forket/src/main.cpp",
-  "output": "CMakeFiles/antivirus.dir/src/main.cpp.o"
+  "output": "CMakeFiles/forket.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/mapak/Desktop/dev/forket/build",
-  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o -c /Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp",
-  "file": "/Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp",
-  "output": "CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o"
-},
-{
-  "directory": "/Users/mapak/Desktop/dev/forket/build",
-  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/scanner.cpp.o -c /Users/mapak/Desktop/dev/forket/src/scanner.cpp",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/scanner.cpp.o -c /Users/mapak/Desktop/dev/forket/src/scanner.cpp",
   "file": "/Users/mapak/Desktop/dev/forket/src/scanner.cpp",
-  "output": "CMakeFiles/antivirus.dir/src/scanner.cpp.o"
+  "output": "CMakeFiles/forket.dir/src/scanner.cpp.o"
 },
 {
   "directory": "/Users/mapak/Desktop/dev/forket/build",
-  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/antivirus.dir/src/utils.cpp.o -c /Users/mapak/Desktop/dev/forket/src/utils.cpp",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/utils.cpp.o -c /Users/mapak/Desktop/dev/forket/src/utils.cpp",
   "file": "/Users/mapak/Desktop/dev/forket/src/utils.cpp",
-  "output": "CMakeFiles/antivirus.dir/src/utils.cpp.o"
+  "output": "CMakeFiles/forket.dir/src/utils.cpp.o"
+},
+{
+  "directory": "/Users/mapak/Desktop/dev/forket/build",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/hash.cpp.o -c /Users/mapak/Desktop/dev/forket/src/hash.cpp",
+  "file": "/Users/mapak/Desktop/dev/forket/src/hash.cpp",
+  "output": "CMakeFiles/forket.dir/src/hash.cpp.o"
+},
+{
+  "directory": "/Users/mapak/Desktop/dev/forket/build",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/realtime_monitoring.cpp.o -c /Users/mapak/Desktop/dev/forket/src/realtime_monitoring.cpp",
+  "file": "/Users/mapak/Desktop/dev/forket/src/realtime_monitoring.cpp",
+  "output": "CMakeFiles/forket.dir/src/realtime_monitoring.cpp.o"
+},
+{
+  "directory": "/Users/mapak/Desktop/dev/forket/build",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/mach_o.cpp.o -c /Users/mapak/Desktop/dev/forket/src/mach_o.cpp",
+  "file": "/Users/mapak/Desktop/dev/forket/src/mach_o.cpp",
+  "output": "CMakeFiles/forket.dir/src/mach_o.cpp.o"
 }
 ]
