@@ -321,6 +321,30 @@ src/utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
+src/yara_scanner.o: src/yara_scanner.cpp.o
+.PHONY : src/yara_scanner.o
+
+# target to build an object file
+src/yara_scanner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/yara_scanner.cpp.o
+.PHONY : src/yara_scanner.cpp.o
+
+src/yara_scanner.i: src/yara_scanner.cpp.i
+.PHONY : src/yara_scanner.i
+
+# target to preprocess a source file
+src/yara_scanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/yara_scanner.cpp.i
+.PHONY : src/yara_scanner.cpp.i
+
+src/yara_scanner.s: src/yara_scanner.cpp.s
+.PHONY : src/yara_scanner.s
+
+# target to generate assembly for a file
+src/yara_scanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/yara_scanner.cpp.s
+.PHONY : src/yara_scanner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -354,6 +378,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
+	@echo "... src/yara_scanner.o"
+	@echo "... src/yara_scanner.i"
+	@echo "... src/yara_scanner.s"
 .PHONY : help
 
 

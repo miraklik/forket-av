@@ -30,7 +30,7 @@ bool QuarantineManager::quarantineFile(const std::string& filepath) {
     std::string filename = fs::path(filepath).filename().string();
     std::string destPath = quarantineDir + "/" + filename + ".vir";
 
-    printf("[QUARANTINE] Moving file to: %s", destPath);
+    printf("[QUARANTINE] Moving file to: %s", destPath.c_str());
 
     if (encryptAndMove(filepath, destPath)) {
         try {

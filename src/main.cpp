@@ -3,6 +3,7 @@
 #include "hash.hpp"
 #include "realtime_monitoring.hpp"
 #include "quarantine.hpp"
+#include "yara_scanner.hpp"
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -91,6 +92,12 @@ int main(int argc, char* argv[]) {
     updateSignatures("signatures.txt");
     loadHashDatabase("hashes.txt");
 
+    printf("Loading YARA rules...\n");
+    YaraScanner yaraEngine;
+    if (!yaraEngine.loadRules("rules_yara")) {
+        printf("Warning: Failed to load YARA rules.\n");
+    }
+
     if (command == "scan") {
         if (argc < 3) {
             printf("Error: No file specified\n");
@@ -99,6 +106,13 @@ int main(int argc, char* argv[]) {
         std::string path = argv[2];
         
         bool result = scanFile(path);
+
+        if (!result) {
+            if (yaraEngine.scanFile(path)) {
+                printf("YARA Detection Triggered!\n");
+                result = true;
+            }
+        }
 
 #ifdef __APPLE__
         if (!result) {
@@ -114,7 +128,7 @@ int main(int argc, char* argv[]) {
 
             QuarantineManager qm;
             if (qm.quarantineFile(path)) {
-                printf("🔒 File has been moved to quarantine.\n");
+                printf("File has been moved to quarantine.\n");
             } else {
                 printf("Failed to quarantine file (Check permissions).\n");
             }

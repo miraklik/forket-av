@@ -14,7 +14,8 @@ set(SOURCES
     src/realtime_monitoring.cpp
     src/pe_analyzer.cpp
     src/mach_o.cpp
-    src/quarantine.cpp  
+    src/quarantine.cpp 
+    src/yara_scanner.cpp 
 )
 
 if (APPLE)
