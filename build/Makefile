@@ -201,6 +201,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/pe_analyzer.o: src/pe_analyzer.cpp.o
+.PHONY : src/pe_analyzer.o
+
+# target to build an object file
+src/pe_analyzer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/pe_analyzer.cpp.o
+.PHONY : src/pe_analyzer.cpp.o
+
+src/pe_analyzer.i: src/pe_analyzer.cpp.i
+.PHONY : src/pe_analyzer.i
+
+# target to preprocess a source file
+src/pe_analyzer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/pe_analyzer.cpp.i
+.PHONY : src/pe_analyzer.cpp.i
+
+src/pe_analyzer.s: src/pe_analyzer.cpp.s
+.PHONY : src/pe_analyzer.s
+
+# target to generate assembly for a file
+src/pe_analyzer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/pe_analyzer.cpp.s
+.PHONY : src/pe_analyzer.cpp.s
+
+src/quarantine.o: src/quarantine.cpp.o
+.PHONY : src/quarantine.o
+
+# target to build an object file
+src/quarantine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/quarantine.cpp.o
+.PHONY : src/quarantine.cpp.o
+
+src/quarantine.i: src/quarantine.cpp.i
+.PHONY : src/quarantine.i
+
+# target to preprocess a source file
+src/quarantine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/quarantine.cpp.i
+.PHONY : src/quarantine.cpp.i
+
+src/quarantine.s: src/quarantine.cpp.s
+.PHONY : src/quarantine.s
+
+# target to generate assembly for a file
+src/quarantine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forket.dir/build.make CMakeFiles/forket.dir/src/quarantine.cpp.s
+.PHONY : src/quarantine.cpp.s
+
 src/realtime_monitoring.o: src/realtime_monitoring.cpp.o
 .PHONY : src/realtime_monitoring.o
 
@@ -291,6 +339,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pe_analyzer.o"
+	@echo "... src/pe_analyzer.i"
+	@echo "... src/pe_analyzer.s"
+	@echo "... src/quarantine.o"
+	@echo "... src/quarantine.i"
+	@echo "... src/quarantine.s"
 	@echo "... src/realtime_monitoring.o"
 	@echo "... src/realtime_monitoring.i"
 	@echo "... src/realtime_monitoring.s"

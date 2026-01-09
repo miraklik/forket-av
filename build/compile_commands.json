@@ -31,8 +31,20 @@
 },
 {
   "directory": "/Users/mapak/Desktop/dev/forket/build",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/pe_analyzer.cpp.o -c /Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp",
+  "file": "/Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp",
+  "output": "CMakeFiles/forket.dir/src/pe_analyzer.cpp.o"
+},
+{
+  "directory": "/Users/mapak/Desktop/dev/forket/build",
   "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/mach_o.cpp.o -c /Users/mapak/Desktop/dev/forket/src/mach_o.cpp",
   "file": "/Users/mapak/Desktop/dev/forket/src/mach_o.cpp",
   "output": "CMakeFiles/forket.dir/src/mach_o.cpp.o"
+},
+{
+  "directory": "/Users/mapak/Desktop/dev/forket/build",
+  "command": "/usr/bin/clang++  -I/Users/mapak/Desktop/dev/forket/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++17 -arch arm64 -o CMakeFiles/forket.dir/src/quarantine.cpp.o -c /Users/mapak/Desktop/dev/forket/src/quarantine.cpp",
+  "file": "/Users/mapak/Desktop/dev/forket/src/quarantine.cpp",
+  "output": "CMakeFiles/forket.dir/src/quarantine.cpp.o"
 }
 ]

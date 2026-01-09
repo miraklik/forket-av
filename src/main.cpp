@@ -2,6 +2,7 @@
 #include "utils.hpp"
 #include "hash.hpp"
 #include "realtime_monitoring.hpp"
+#include "quarantine.hpp"
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -32,7 +33,16 @@ void onFileEvent(const std::string& path, bool isCreated, bool isModified) {
     }
 #endif
 
-    if (isMalware) printf("THREAT DETECTED!\n");
+    if (isMalware) {
+        printf("THREAT DETECTED: %s\n", path.c_str());
+        
+        QuarantineManager qm;
+        if (qm.quarantineFile(path)) {
+            printf("File has been automatically quarantined.\n");
+        } else {
+            printf("Failed to quarantine file.\n");
+        }
+    }
 }
 
 int main(int argc, char* argv[]) {
@@ -77,6 +87,7 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 #endif
+
     updateSignatures("signatures.txt");
     loadHashDatabase("hashes.txt");
 
@@ -90,13 +101,28 @@ int main(int argc, char* argv[]) {
         bool result = scanFile(path);
 
 #ifdef __APPLE__
-        if (!result) result = analyzeMachO(path);
+        if (!result) {
+            if (analyzeMachO(path)) {
+                printf("Heuristic Detection: Suspicious Mach-O Header\n");
+                result = true;
+            }
+        }
 #endif
 
-        if (result) printf("THREAT DETECTED!\n");
-        else        printf("Clean\n");
-        
-        return result;
+        if (result) {
+            printf("THREAT DETECTED!\n");
+
+            QuarantineManager qm;
+            if (qm.quarantineFile(path)) {
+                printf("🔒 File has been moved to quarantine.\n");
+            } else {
+                printf("Failed to quarantine file (Check permissions).\n");
+            }
+        } else {
+            printf("Clean\n");
+        }
+
+        return result ? 1 : 0;
     }
 
     if (command == "scandir") {

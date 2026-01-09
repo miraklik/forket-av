@@ -12,6 +12,9 @@ set(SOURCES
     src/utils.cpp
     src/hash.cpp
     src/realtime_monitoring.cpp
+    src/pe_analyzer.cpp
+    src/mach_o.cpp
+    src/quarantine.cpp  
 )
 
 if (APPLE)
