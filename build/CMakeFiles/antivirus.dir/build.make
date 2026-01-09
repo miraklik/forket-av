@@ -100,10 +100,24 @@ CMakeFiles/antivirus.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/antivirus.dir/src/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mapak/Desktop/dev/forket/src/main.cpp -o CMakeFiles/antivirus.dir/src/main.cpp.s
 
+CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o: CMakeFiles/antivirus.dir/flags.make
+CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o: /Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp
+CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o: CMakeFiles/antivirus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o -MF CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o.d -o CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o -c /Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp
+
+CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp > CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.i
+
+CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp -o CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.s
+
 CMakeFiles/antivirus.dir/src/scanner.cpp.o: CMakeFiles/antivirus.dir/flags.make
 CMakeFiles/antivirus.dir/src/scanner.cpp.o: /Users/mapak/Desktop/dev/forket/src/scanner.cpp
 CMakeFiles/antivirus.dir/src/scanner.cpp.o: CMakeFiles/antivirus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/antivirus.dir/src/scanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/antivirus.dir/src/scanner.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/antivirus.dir/src/scanner.cpp.o -MF CMakeFiles/antivirus.dir/src/scanner.cpp.o.d -o CMakeFiles/antivirus.dir/src/scanner.cpp.o -c /Users/mapak/Desktop/dev/forket/src/scanner.cpp
 
 CMakeFiles/antivirus.dir/src/scanner.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/antivirus.dir/src/scanner.cpp.s: cmake_force
 CMakeFiles/antivirus.dir/src/utils.cpp.o: CMakeFiles/antivirus.dir/flags.make
 CMakeFiles/antivirus.dir/src/utils.cpp.o: /Users/mapak/Desktop/dev/forket/src/utils.cpp
 CMakeFiles/antivirus.dir/src/utils.cpp.o: CMakeFiles/antivirus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/antivirus.dir/src/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/antivirus.dir/src/utils.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/antivirus.dir/src/utils.cpp.o -MF CMakeFiles/antivirus.dir/src/utils.cpp.o.d -o CMakeFiles/antivirus.dir/src/utils.cpp.o -c /Users/mapak/Desktop/dev/forket/src/utils.cpp
 
 CMakeFiles/antivirus.dir/src/utils.cpp.i: cmake_force
@@ -132,6 +146,7 @@ CMakeFiles/antivirus.dir/src/utils.cpp.s: cmake_force
 antivirus_OBJECTS = \
 "CMakeFiles/antivirus.dir/src/hash.cpp.o" \
 "CMakeFiles/antivirus.dir/src/main.cpp.o" \
+"CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o" \
 "CMakeFiles/antivirus.dir/src/scanner.cpp.o" \
 "CMakeFiles/antivirus.dir/src/utils.cpp.o"
 
@@ -140,11 +155,12 @@ antivirus_EXTERNAL_OBJECTS =
 
 antivirus: CMakeFiles/antivirus.dir/src/hash.cpp.o
 antivirus: CMakeFiles/antivirus.dir/src/main.cpp.o
+antivirus: CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o
 antivirus: CMakeFiles/antivirus.dir/src/scanner.cpp.o
 antivirus: CMakeFiles/antivirus.dir/src/utils.cpp.o
 antivirus: CMakeFiles/antivirus.dir/build.make
 antivirus: CMakeFiles/antivirus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable antivirus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable antivirus"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/antivirus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -85,12 +85,12 @@ clean: CMakeFiles/antivirus.dir/clean
 CMakeFiles/antivirus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target antivirus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target antivirus"
 .PHONY : CMakeFiles/antivirus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/antivirus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mapak/Desktop/dev/forket/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mapak/Desktop/dev/forket/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/antivirus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mapak/Desktop/dev/forket/build/CMakeFiles 0
 .PHONY : CMakeFiles/antivirus.dir/rule
@@ -102,7 +102,7 @@ antivirus: CMakeFiles/antivirus.dir/rule
 # codegen rule for target.
 CMakeFiles/antivirus.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target antivirus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mapak/Desktop/dev/forket/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target antivirus"
 .PHONY : CMakeFiles/antivirus.dir/codegen
 
 # clean rule for target.

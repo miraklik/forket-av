@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/mapak/Desktop/dev/forket/src/hash.cpp" "CMakeFiles/antivirus.dir/src/hash.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/hash.cpp.o.d"
   "/Users/mapak/Desktop/dev/forket/src/main.cpp" "CMakeFiles/antivirus.dir/src/main.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/main.cpp.o.d"
+  "/Users/mapak/Desktop/dev/forket/src/pe_analyzer.cpp" "CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o.d"
   "/Users/mapak/Desktop/dev/forket/src/scanner.cpp" "CMakeFiles/antivirus.dir/src/scanner.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/scanner.cpp.o.d"
   "/Users/mapak/Desktop/dev/forket/src/utils.cpp" "CMakeFiles/antivirus.dir/src/utils.cpp.o" "gcc" "CMakeFiles/antivirus.dir/src/utils.cpp.o.d"
   )

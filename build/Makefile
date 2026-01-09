@@ -177,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/pe_analyzer.o: src/pe_analyzer.cpp.o
+.PHONY : src/pe_analyzer.o
+
+# target to build an object file
+src/pe_analyzer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.o
+.PHONY : src/pe_analyzer.cpp.o
+
+src/pe_analyzer.i: src/pe_analyzer.cpp.i
+.PHONY : src/pe_analyzer.i
+
+# target to preprocess a source file
+src/pe_analyzer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.i
+.PHONY : src/pe_analyzer.cpp.i
+
+src/pe_analyzer.s: src/pe_analyzer.cpp.s
+.PHONY : src/pe_analyzer.s
+
+# target to generate assembly for a file
+src/pe_analyzer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antivirus.dir/build.make CMakeFiles/antivirus.dir/src/pe_analyzer.cpp.s
+.PHONY : src/pe_analyzer.cpp.s
+
 src/scanner.o: src/scanner.cpp.o
 .PHONY : src/scanner.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pe_analyzer.o"
+	@echo "... src/pe_analyzer.i"
+	@echo "... src/pe_analyzer.s"
 	@echo "... src/scanner.o"
 	@echo "... src/scanner.i"
 	@echo "... src/scanner.s"
