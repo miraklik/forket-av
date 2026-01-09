@@ -79,9 +79,9 @@ Phase 3: Hash-based scanning (MD5/SHA256). ✅
 
 Phase 4: Multithreading (using Thread Pools for faster scanning). ✅
 
-Phase 5: Mach-O / PE file header analysis. ⏳
+Phase 5: Mach-O / PE file header analysis. ✅
 
-Phase 6: Real-time file monitoring (using macOS FSEvents). ⏳
+Phase 6: Real-time file monitoring (using macOS FSEvents). ✅
 
 # ⚠️ Disclaimer
 This software is provided "as is", without warranty of any kind. The author is not responsible for any damage or data loss caused by the use of this software. Please do not use this tool to handle real malware samples unless you know what you are doing.
